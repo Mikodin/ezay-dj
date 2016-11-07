@@ -1,2 +1,2 @@
 # Ezay-DJ
-### An experiment to make it easy to mix custom music by uploading music / play from soundcloud
+### An experiment to make it easy to mix custom music by from soundcloud
