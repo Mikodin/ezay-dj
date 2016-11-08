@@ -1,17 +1,40 @@
-var iframe1 = document.querySelector('#widget1');
-iframe1.src = 'http://w.soundcloud.com/player/?url=http://api.soundcloud.com/tracks/288700921&auto_play=false&single_active=false';
+var widgets = [];
+var queue = [];
 
-var widget1 = SC.Widget(iframe1);
+addWidget(287528029);
+addWidget(288700921);
 
-widget1.bind(SC.Widget.Events.PLAY, function(eventData) {
-  console.log('Playing Widget1');
-});
+function addWidget(trackId) {
+  var widget = { };
+  widget.id = trackId;
+  widget.iframe = document.createElement('iframe');
+  widget.iframe.src = 'http://w.soundcloud.com/player/?url=' + 
+    'http://api.soundcloud.com/tracks/' 
+    + trackId + 
+    '&auto_play=false&single_active=false';
 
-var iframe2 = document.querySelector('#widget2');
-iframe2.src = 'http://w.soundcloud.com/player/?url=http://api.soundcloud.com/tracks/287528029&auto_play=false&single_active=false';
+  widget.scWidget = SC.Widget(widget.iframe);
 
-var widget2 = SC.Widget(iframe2);
 
-widget2.bind(SC.Widget.Events.PLAY, function(eventData) {
-  console.log('Playing Widget2');
-});
+  widget.scWidget.bind(SC.Widget.Events.PLAY, function(eventData) {
+    console.log('Playing Widget2');
+  });
+
+  var widgetDiv = document.getElementById('widgets');
+  widgetDiv.appendChild(widget.iframe);
+
+  widgets.push(widget);
+  return widget;
+}
+
+function playAll() {
+  widgets.forEach(widget => {
+    widget.scWidget.play();
+  });
+}
+
+function pauseAll() {
+  widgets.forEach(widget => {
+    widget.scWidget.pause();
+  });
+}

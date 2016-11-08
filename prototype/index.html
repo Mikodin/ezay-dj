@@ -13,10 +13,41 @@ iframe {
     </style>
   </head>
   <body>
-    <iframe id="widget1" width="100%"></iframe>
+    <section id="addSong">
+      <h2>Add a Song</h2>
+      <form>
+        <fieldset>
+          <legend>Start Spinnin with a new song</legend>
 
-    <iframe id="widget2" width="100%"></iframe>
+          <label>
+            <span>Song ID</span>
+            <input type="text" name="songId" id="songId">
+          </label>
 
+          <label>
+            <button type="button"
+                    onclick="addWidget(document.getElementById('songId').value)">Add</button> 
+          </label>
+
+        </fieldset>
+      </form>
+
+    </section id="controls">
+    <label>
+      <button type="button"
+              onclick="playAll()">Play All</button> 
+    </label>
+    <label>
+      <button type="button"
+              onclick="pauseAll()">Pause All</button> 
+    </label>
+    <section>
+
+      <section id="music">
+        <div id="widgets">
+
+        </div>
+      </section>
   </body>
   <script src="http://w.soundcloud.com/player/api.js"></script>
   <script src="js/script.js"></script>
