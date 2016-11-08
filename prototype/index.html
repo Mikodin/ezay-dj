@@ -35,6 +35,11 @@ iframe {
     <section id="controls">
     <label>
       <button type="button"
+              onclick="playQueue()">Play Queue</button> 
+    </label>
+
+    <label>
+      <button type="button"
               onclick="playAll()">Play All</button> 
     </label>
 
@@ -42,11 +47,11 @@ iframe {
       <button type="button"
               onclick="pauseAll()">Pause All</button> 
     </label>
+    </section>
 
-    <label>
-      <button type="button"
-              onclick="playQueue()">Play Queue</button> 
-    </label>
+    <section id="queue">
+      <ol id="queueList">
+      </ol>
     </section>
 
       <section id="music">

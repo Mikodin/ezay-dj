@@ -26,6 +26,7 @@ function addWidget(trackId) {
     '&auto_play=false&single_active=false';
   widget.scWidget = SC.Widget(widget.iframe);
 
+
   addListeners(widget);
 
   div.appendChild(widget.iframe);
@@ -51,10 +52,15 @@ function addListeners(widget) {
     widget.eventData = eventData;
     playNextInQueue();
   });
+  console.log(widget);
 }
 
 function addTrackToQueue(widget) {
   console.log(widget);
+  var ol = document.getElementById('queueList');
+  var li = document.createElement('li');
+  li.innerHTML = widget.id;
+  ol.appendChild(li);
   queue.push(widget);
 }
 
