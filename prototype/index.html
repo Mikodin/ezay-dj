@@ -2,16 +2,9 @@
 <html>
   <head>
     <title>Widget Demo</title>
-    <style type="text/css">
-iframe {
-  width:50%;
-  display:block;
-  border:0;
-  margin-bottom: 20px;
-  height: 150px;
-}
-    </style>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
   </head>
+
   <body>
     <section id="addSong">
       <h2>Add a Song</h2>
@@ -31,22 +24,23 @@ iframe {
 
         </fieldset>
       </form>
+    </section>
 
     <section id="controls">
-    <label>
-      <button type="button"
-              onclick="playQueue()">Play Queue</button> 
-    </label>
+      <label>
+        <button type="button"
+                onclick="playQueue()">Play Queue</button> 
+      </label>
 
-    <label>
-      <button type="button"
-              onclick="playAll()">Play All</button> 
-    </label>
+      <label>
+        <button type="button"
+                onclick="playAll()">Play All</button> 
+      </label>
 
-    <label>
-      <button type="button"
-              onclick="pauseAll()">Pause All</button> 
-    </label>
+      <label>
+        <button type="button"
+                onclick="pauseAll()">Pause All</button> 
+      </label>
     </section>
 
     <section id="queue">
@@ -54,11 +48,11 @@ iframe {
       </ol>
     </section>
 
-      <section id="music">
-        <div id="widgets">
+    <section id="music">
+      <div id="widgets">
 
-        </div>
-      </section>
+      </div>
+    </section>
   </body>
   <script src="http://w.soundcloud.com/player/api.js"></script>
   <script src="js/script.js"></script>

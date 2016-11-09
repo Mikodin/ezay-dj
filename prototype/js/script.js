@@ -15,6 +15,11 @@ function addWidget(trackId) {
   addQueueBtn.addEventListener('click',function() { addTrackToQueue(widget) });
   addQueueBtn.innerHTML = 'Add To Queue';
 
+  var playFromLocation = document.createElement('input');
+  playFromLocation.type = 'number'
+  playFromLocation.id = trackId + 'playFromLoc';
+  playFromLocation.name = trackId + 'playFromLoc';
+
   var widgetsDiv = document.getElementById('widgets');
 
   var widget = { };
@@ -31,6 +36,7 @@ function addWidget(trackId) {
 
   div.appendChild(widget.iframe);
   div.appendChild(addQueueBtn);
+  div.appendChild(playFromLocation);
 
   widgetsDiv.appendChild(div);
 
