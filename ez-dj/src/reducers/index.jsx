@@ -1,7 +1,8 @@
 import { combineReducers } from 'redux';
+import ScSongReducer from './reducer_scsong';
 
 const rootReducer = combineReducers({
-  state: (state = {}) => state
+  scSong: ScSongReducer
 });
 
 export default rootReducer;
