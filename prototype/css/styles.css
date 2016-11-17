@@ -1,0 +1,12 @@
+li {
+  display: inline;
+  margin-left: 7px;
+}
+
+iframe {
+  width:50%;
+  display:block;
+  border:0;
+  margin-bottom: 20px;
+  height: 150px;
+}
