@@ -1,2 +1,8 @@
+node_modules
+npm-debug.log
+.*.*.swp
+.*.*.swo
 *.swp
 *.swo
+.vagrant
+.git
